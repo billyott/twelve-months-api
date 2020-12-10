@@ -1,8 +1,8 @@
-User.destroy_all
-Day.destroy_all
+DayHabit.destroy_all
 Note.destroy_all
 Habit.destroy_all
-DayHabit.destroy_all
+Day.destroy_all
+User.destroy_all
 
 #user seeds
 billy = User.create(email: 'billy@billy.com', username: 'bott18', password: 'Kerokero18' )
@@ -41,27 +41,27 @@ b_d29 = Day.create(date: "11/29/2020", mood_score: 1, sleep_hours: 5, user: bill
 b_d30 = Day.create(date: "11/30/2020", mood_score: 2, sleep_hours: 6, user: billy)
 
 #note seeds
-b_d1_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d1)
-b_d1_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d1)
-b_d1_n3 = Note.create(note: "lorem ipsum3", type: "Event", important: false, day: b_d1)
-b_d2_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d2)
-b_d2_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d2)
-b_d2_n3 = Note.create(note: "lorem ipsum3", type: "Event", important: false, day: b_d2)
-b_d3_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d3)
-b_d3_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d3)
-b_d3_n3 = Note.create(note: "lorem ipsum3", type: "Event", important: false, day: b_d3)
-b_d4_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d4)
-b_d4_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d4)
-b_d4_n3 = Note.create(note: "lorem ipsum3", type: "Event", important: false, day: b_d4)
-b_d5_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d5)
-b_d5_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d5)
-b_d5_n3 = Note.create(note: "lorem ipsum3", type: "Event", important: false, day: b_d5)
-b_d6_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d6)
-b_d6_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d6)
-b_d6_n3 = Note.create(note: "lorem ipsum3", type: "Event", important: false, day: b_d6)
-b_d7_n1 = Note.create(note: "lorem ipsum1", type: "Thought", important: false, day: b_d7)
-b_d7_n2 = Note.create(note: "lorem ipsum2", type: "Thought", important: true, day: b_d7)
-b_d7_n3 = Note.create(note: "lorem ipsum3", type: "Eventt", important: false, day: b_d7)
+b_d1_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d1)
+b_d1_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d1)
+b_d1_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d1)
+b_d2_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d2)
+b_d2_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d2)
+b_d2_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d2)
+b_d3_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d3)
+b_d3_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d3)
+b_d3_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d3)
+b_d4_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d4)
+b_d4_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d4)
+b_d4_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d4)
+b_d5_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d5)
+b_d5_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d5)
+b_d5_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d5)
+b_d6_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d6)
+b_d6_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d6)
+b_d6_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d6)
+b_d7_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d7)
+b_d7_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d7)
+b_d7_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d7)
 
 
 #habit seeds
@@ -72,22 +72,22 @@ b_h4 = Habit.create(title: "Floss", archived: true)
 
 
 #day_habit seeds
-b_d1_h1 = DayHabit.create(day: b_d1, habit: b_h1)
-b_d1_h2 = DayHabit.create(day: b_d1, habit: b_h2)
-b_d2_h1 = DayHabit.create(day: b_d2, habit: b_h1)
-b_d2_h2 = DayHabit.create(day: b_d2, habit: b_h2)
-b_d2_h3 = DayHabit.create(day: b_d2, habit: b_h3)
-b_d3_h2 = DayHabit.create(day: b_d3, habit: b_h1)
-b_d3_h2 = DayHabit.create(day: b_d3, habit: b_h2)
-b_d3_h3 = DayHabit.create(day: b_d3, habit: b_h3)
-b_d3_h4 = DayHabit.create(day: b_d3, habit: b_h4)
-b_d4_h2 = DayHabit.create(day: b_d4, habit: b_h1)
-b_d4_h2 = DayHabit.create(day: b_d4, habit: b_h2)
-b_d4_h3 = DayHabit.create(day: b_d4, habit: b_h3)
-b_d4_h4 = DayHabit.create(day: b_d4, habit: b_h4)
-b_d5_h2 = DayHabit.create(day: b_d5, habit: b_h2)
-b_d5_h3 = DayHabit.create(day: b_d5, habit: b_h3)
-b_d6_h2 = DayHabit.create(day: b_d6, habit: b_h2)
-b_d6_h3 = DayHabit.create(day: b_d6, habit: b_h3)
-b_d7_h1 = DayHabit.create(day: b_d7, habit: b_h1)
-b_d7_h2 = DayHabit.create(day: b_d7, habit: b_h2)
+b_d1_h1 = DayHabit.create(day_id: b_d1.id, habit_id: b_h1.id)
+b_d1_h2 = DayHabit.create(day_id: b_d1.id, habit_id: b_h2.id)
+b_d2_h1 = DayHabit.create(day_id: b_d2.id, habit_id: b_h1.id)
+b_d2_h2 = DayHabit.create(day_id: b_d2.id, habit_id: b_h2.id)
+b_d2_h3 = DayHabit.create(day_id: b_d2.id, habit_id: b_h3.id)
+b_d3_h2 = DayHabit.create(day_id: b_d3.id, habit_id: b_h1.id)
+b_d3_h2 = DayHabit.create(day_id: b_d3.id, habit_id: b_h2.id)
+b_d3_h3 = DayHabit.create(day_id: b_d3.id, habit_id: b_h3.id)
+b_d3_h4 = DayHabit.create(day_id: b_d3.id, habit_id: b_h4.id)
+b_d4_h2 = DayHabit.create(day_id: b_d4.id, habit_id: b_h1.id)
+b_d4_h2 = DayHabit.create(day_id: b_d4.id, habit_id: b_h2.id)
+b_d4_h3 = DayHabit.create(day_id: b_d4.id, habit_id: b_h3.id)
+b_d4_h4 = DayHabit.create(day_id: b_d4.id, habit_id: b_h4.id)
+b_d5_h2 = DayHabit.create(day_id: b_d5.id, habit_id: b_h2.id)
+b_d5_h3 = DayHabit.create(day_id: b_d5.id, habit_id: b_h3.id)
+b_d6_h2 = DayHabit.create(day_id: b_d6.id, habit_id: b_h2.id)
+b_d6_h3 = DayHabit.create(day_id: b_d6.id, habit_id: b_h3.id)
+b_d7_h1 = DayHabit.create(day_id: b_d7.id, habit_id: b_h1.id)
+b_d7_h2 = DayHabit.create(day_id: b_d7.id, habit_id: b_h2.id)
