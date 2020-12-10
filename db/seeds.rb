@@ -65,10 +65,10 @@ b_d7_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false
 
 
 #habit seeds
-b_h1 = Habit.create(title: "Exercise", archived: false)
-b_h2 = Habit.create(title: "Meditation", archived: false)
-b_h3 = Habit.create(title: "Practice Piano", archived: false)
-b_h4 = Habit.create(title: "Floss", archived: true)
+b_h1 = Habit.create(title: "Exercise", archived: false, user: billy)
+b_h2 = Habit.create(title: "Meditation", archived: false, user: billy)
+b_h3 = Habit.create(title: "Practice Piano", archived: false, user: billy)
+b_h4 = Habit.create(title: "Floss", archived: true, user: billy)
 
 
 #day_habit seeds
