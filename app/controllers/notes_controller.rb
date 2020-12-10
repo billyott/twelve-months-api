@@ -12,7 +12,7 @@ class NotesController < ApplicationController
     
     def update
         note = Note.find(params[:id])
-        note.update!(note: params[:note], note_type: params[:note_type], important: params[:important], user_id: params[:user_id])
+        note.update!(note: params[:note], note_type: params[:note_type], important: params[:important], day_id: params[:day_id])
         render json: note
     end
 
