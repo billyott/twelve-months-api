@@ -1,0 +1,2 @@
+class DayHabitsController < ApplicationController
+end
