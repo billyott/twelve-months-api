@@ -1,15 +1,25 @@
 class DaysController < ApplicationController
 
     def index
-        days = Day.all
-        filtered_days = days.select{|day| day.user.id == params[:user_id].to_i && (Date.parse(params[:start_date]) .. Date.parse(params[:end_date])).include?(day.date)}
-        if filtered_days.length > 0
-            render json: filtered_days
+        end_date = params[:end_date] ? Date.parse(params[:end_date]) : Date.today
+        start_date = params[:start_date] ? Date.parse(params[:start_date]) : Date.today - 3
+        matched_user = User.all.find{|user| user.id == params[:user_id].to_i}
+        if matched_user
+            date_range = start_date .. end_date
+            days = []
+            date_range.each do |date|
+                day = Day.all.find{|day| day.user.id == matched_user.id and day.date == date}
+                if day
+                    days << day
+                else
+                    day = Day.create(user: matched_user, date: date)
+                    days << day
+                end
+            end
+            render json: days
         else
-            render json: { error: 'unable to process request. check query parameters and try again.' }
+            render json: []
         end
-
-        # days?user_id=23&start_date=11-01-2020&end_date=11-03-2020
     end
 
     def create
