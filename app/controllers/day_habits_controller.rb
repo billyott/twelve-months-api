@@ -15,7 +15,7 @@ class DayHabitsController < ApplicationController
     end
     
     def create
-        day_habit = day_habit.create!(day_habit_params)
+        day_habit = DayHabit.create!(day_habit_params)
         render json: day_habit
     end
 
@@ -28,7 +28,7 @@ class DayHabitsController < ApplicationController
     private
 
     def day_habit_params
-        params.permit(:day_id, :habit_id)
+        params.require(:day_habit).permit(:day_id, :habit_id)
     end
 
 end
