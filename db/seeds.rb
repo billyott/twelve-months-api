@@ -40,6 +40,9 @@ b_d28 = Day.create(date: Date.new(2020,11,28), mood_score: 4, sleep_hours: 8, us
 b_d29 = Day.create(date: Date.new(2020,11,29), mood_score: 1, sleep_hours: 5, user: billy)
 b_d30 = Day.create(date: Date.new(2020,11,30), mood_score: 2, sleep_hours: 6, user: billy)
 b_d31 = Day.create(date: Date.new(2020,12,13), mood_score: 2, sleep_hours: 6, user: billy)
+b_d32 = Day.create(date: Date.new(2020,12,12), mood_score: 2, sleep_hours: 6, user: billy)
+b_d33 = Day.create(date: Date.new(2020,12,11), mood_score: 2, sleep_hours: 6, user: billy)
+b_d34 = Day.create(date: Date.new(2020,12,10), mood_score: 2, sleep_hours: 6, user: billy)
 
 #note seeds
 b_d1_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d1)
@@ -63,6 +66,9 @@ b_d6_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false
 b_d7_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d7)
 b_d7_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d7)
 b_d7_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d7)
+b_d31_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_d31)
+b_d31_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_d31)
+b_d31_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_d31)
 
 
 #habit seeds
@@ -92,3 +98,4 @@ b_d6_h2 = DayHabit.create(day_id: b_d6.id, habit_id: b_h2.id)
 b_d6_h3 = DayHabit.create(day_id: b_d6.id, habit_id: b_h3.id)
 b_d7_h1 = DayHabit.create(day_id: b_d7.id, habit_id: b_h1.id)
 b_d7_h2 = DayHabit.create(day_id: b_d7.id, habit_id: b_h2.id)
+b_d31_h2 = DayHabit.create(day_id: b_d31.id, habit_id: b_h2.id)

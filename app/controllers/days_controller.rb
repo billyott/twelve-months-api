@@ -16,6 +16,7 @@ class DaysController < ApplicationController
                     days << day
                 end
             end
+            days = days.reverse()
             render json: days
         else
             render json: []
