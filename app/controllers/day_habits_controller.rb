@@ -20,7 +20,7 @@ class DayHabitsController < ApplicationController
     end
 
     def destroy
-        day_habit = day_habit.find(params[:id])
+        day_habit = DayHabit.find(params[:id])
         day_habit.destroy!
         render json: {}
     end
