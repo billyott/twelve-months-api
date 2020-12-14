@@ -2,7 +2,16 @@ class DayHabitsController < ApplicationController
 
     def index
         day_habits = DayHabit.all
-        render json: day_habits, except: [:created_at, :updated_at]
+        if params[:habit_id] and params[:day_id]
+            matched_day_habit = day_habits.find{|dh| dh.habit_id == params[:habit_id].to_i and dh.day_id == params[:day_id].to_i}
+            if matched_day_habit
+                render json: matched_day_habit, except: [:created_at, :updated_at]
+            else
+                render json: {}
+            end
+        else
+            render json: day_habits, except: [:created_at, :updated_at]
+        end 
     end
     
     def create
