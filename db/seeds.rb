@@ -129,6 +129,9 @@ b_dd16_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: fal
 b_dd17_n1 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_dd17)
 b_dd17_n2 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_dd17)
 b_dd17_n3 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_dd17)
+b_dd17_n4 = Note.create(note: "lorem ipsum1", note_type: "Thought", important: false, day: b_dd17)
+b_dd17_n5 = Note.create(note: "lorem ipsum2", note_type: "Thought", important: true, day: b_dd17)
+b_dd17_n6 = Note.create(note: "lorem ipsum3", note_type: "Event", important: false, day: b_dd17)
 
 
 #habit seeds
